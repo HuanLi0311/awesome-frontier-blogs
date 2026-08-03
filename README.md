@@ -29,35 +29,35 @@ Every entry is checked against its original source. Dates are precise when the s
 
 ### 1. Build — Agents & harnesses
 
-- Harness Engineering for Self-Improvement [[2026.07]](https://lilianweng.github.io/posts/2026-07-04-harness/) — Builds verifiable self-improvement loops around an agent harness.
-- Harness Engineering [[2026.02]](https://openai.com/index/harness-engineering/) — Production lessons from OpenAI's agent runtime architecture.
-- Building Effective Agents [[2024.12]](https://www.anthropic.com/engineering/building-effective-agents) — A durable guide to choosing workflows or autonomous agents.
-- AlphaEvolve [[2025.05]](https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/) — Combines code generation, evaluation, and evolution to discover algorithms.
-- Qwen-AgentWorld [[2026.06]](https://github.com/QwenLM/Qwen-AgentWorld) — Uses language world models to scale general agent training.
-- Build Agents, Not Pipelines [[2026.05]](https://seangoedecke.com/build-agents-not-pipelines/) — Explains when an autonomous loop beats a fixed pipeline.
+- Harness Engineering for Self-Improvement [[2026.07]](https://lilianweng.github.io/posts/2026-07-04-harness/) <sub>Builds verifiable self-improvement loops around an agent harness.</sub>
+- Harness Engineering [[2026.02]](https://openai.com/index/harness-engineering/) <sub>Production lessons from OpenAI's agent runtime architecture.</sub>
+- Building Effective Agents [[2024.12]](https://www.anthropic.com/engineering/building-effective-agents) <sub>A durable guide to choosing workflows or autonomous agents.</sub>
+- AlphaEvolve [[2025.05]](https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/) <sub>Combines code generation, evaluation, and evolution to discover algorithms.</sub>
+- Qwen-AgentWorld [[2026.06]](https://github.com/QwenLM/Qwen-AgentWorld) <sub>Uses language world models to scale general agent training.</sub>
+- Build Agents, Not Pipelines [[2026.05]](https://seangoedecke.com/build-agents-not-pipelines/) <sub>Explains when an autonomous loop beats a fixed pipeline.</sub>
 
 ### 2. Train — Reasoning & post-training
 
-- Kimi-Researcher [[2025.06]](https://moonshotai.github.io/Kimi-Researcher/) — Trains long-horizon search and reasoning end to end with RL.
-- SFT, RL, and On-Policy Distillation Through a Distributional Lens [[2026.05]](https://nrehiew.github.io/blog/sft_rl_opd/) — Unifies three post-training methods through policy distributions.
-- Frontier Post-training Recipe Review [[2026.06]](https://www.interconnects.ai/p/frontier-post-training-recipe-review) — Breaks down frontier post-training recipes from practice.
-- DeepSeek-R1 [[2025.01]](https://github.com/deepseek-ai/DeepSeek-R1) — Maps verifiable-reward RL and multi-stage reasoning training.
+- Kimi-Researcher [[2025.06]](https://moonshotai.github.io/Kimi-Researcher/) <sub>Trains long-horizon search and reasoning end to end with RL.</sub>
+- SFT, RL, and On-Policy Distillation Through a Distributional Lens [[2026.05]](https://nrehiew.github.io/blog/sft_rl_opd/) <sub>Unifies three post-training methods through policy distributions.</sub>
+- Frontier Post-training Recipe Review [[2026.06]](https://www.interconnects.ai/p/frontier-post-training-recipe-review) <sub>Breaks down frontier post-training recipes from practice.</sub>
+- DeepSeek-R1 [[2025.01]](https://github.com/deepseek-ai/DeepSeek-R1) <sub>Maps verifiable-reward RL and multi-stage reasoning training.</sub>
 
 ### 3. Inspect — Mechanistic interpretability
 
-- Verbalizable Representations Form a Global Workspace in Language Models [[2026.07]](https://transformer-circuits.pub/2026/workspace/index.html) — Tests the global-workspace hypothesis inside a language model.
-- Circuit Tracing [[2025.03]](https://transformer-circuits.pub/2025/attribution-graphs/methods.html) — Traces an internal computation graph from a single prompt.
-- On the Biology of a Large Language Model [[2025.03]](https://transformer-circuits.pub/2025/attribution-graphs/biology.html) — Dissects Claude's mechanisms through concrete case studies.
-- Natural Language Autoencoders [[2026.05]](https://transformer-circuits.pub/2026/nla/index.html) — Translates model activations directly into natural-language explanations.
+- Verbalizable Representations Form a Global Workspace in Language Models [[2026.07]](https://transformer-circuits.pub/2026/workspace/index.html) <sub>Tests the global-workspace hypothesis inside a language model.</sub>
+- Circuit Tracing [[2025.03]](https://transformer-circuits.pub/2025/attribution-graphs/methods.html) <sub>Traces an internal computation graph from a single prompt.</sub>
+- On the Biology of a Large Language Model [[2025.03]](https://transformer-circuits.pub/2025/attribution-graphs/biology.html) <sub>Dissects Claude's mechanisms through concrete case studies.</sub>
+- Natural Language Autoencoders [[2026.05]](https://transformer-circuits.pub/2026/nla/index.html) <sub>Translates model activations directly into natural-language explanations.</sub>
 
 ### 4. Trust — Alignment & evaluations
 
-- Measuring AI Agent Autonomy in Practice [[2025.09]](https://www.anthropic.com/research/measuring-agent-autonomy) — Turns agent autonomy into observable deployment measures.
-- Agentic Misalignment [[2025.06]](https://www.anthropic.com/research/agentic-misalignment) — Stress-tests agent behavior under conflicting goals.
-- Evaluating Chain-of-Thought Monitorability [[2025.12]](https://openai.com/index/evaluating-chain-of-thought-monitorability/) — Tests whether reasoning traces remain useful safety signals.
-- How Confessions Can Keep Language Models Honest [[2025.12]](https://openai.com/index/how-confessions-can-keep-language-models-honest/) — Uses a separate confession channel to expose shortcuts and errors.
-- Why Language Models Hallucinate [[2025.09]](https://openai.com/index/why-language-models-hallucinate/) — Explains hallucinations through training and evaluation incentives.
-- Genie 3 [[2025.08]](https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/) — Moves world models from video generation to interactive environments.
+- Measuring AI Agent Autonomy in Practice [[2025.09]](https://www.anthropic.com/research/measuring-agent-autonomy) <sub>Turns agent autonomy into observable deployment measures.</sub>
+- Agentic Misalignment [[2025.06]](https://www.anthropic.com/research/agentic-misalignment) <sub>Stress-tests agent behavior under conflicting goals.</sub>
+- Evaluating Chain-of-Thought Monitorability [[2025.12]](https://openai.com/index/evaluating-chain-of-thought-monitorability/) <sub>Tests whether reasoning traces remain useful safety signals.</sub>
+- How Confessions Can Keep Language Models Honest [[2025.12]](https://openai.com/index/how-confessions-can-keep-language-models-honest/) <sub>Uses a separate confession channel to expose shortcuts and errors.</sub>
+- Why Language Models Hallucinate [[2025.09]](https://openai.com/index/why-language-models-hallucinate/) <sub>Explains hallucinations through training and evaluation incentives.</sub>
+- Genie 3 [[2025.08]](https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/) <sub>Moves world models from video generation to interactive environments.</sub>
 
 ## What qualifies
 
