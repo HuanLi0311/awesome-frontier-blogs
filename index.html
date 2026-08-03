@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="A curated field guide to frontier LLM and agent research blogs.">
   <meta name="theme-color" content="#f3f6f5">
-  <title>Frontier / Log — 前沿技术博客索引</title>
+  <title>Frontier / Log — Technical Research Index</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
@@ -15,12 +15,12 @@
   <div class="boot" aria-hidden="true"><span>frontier/log</span><i></i></div>
 
   <header class="site-header" id="site-header">
-    <a class="brand" href="#top" aria-label="Frontier Log 首页">
+    <a class="brand" href="#top" aria-label="Frontier Log home">
       <span>frontier</span><i>/</i><span>log</span>
     </a>
-    <nav class="header-nav" aria-label="主导航">
-      <a href="#library">索引</a>
-      <a href="#method">方法</a>
+    <nav class="header-nav" aria-label="Primary navigation">
+      <a href="#library">Index</a>
+      <a href="#method">Method</a>
       <a href="https://github.com/HuanLi0311/awesome-frontier-blogs" target="_blank" rel="noreferrer">GitHub</a>
     </nav>
     <div class="header-meta"><span id="header-count">50</span> signals · updated 2026.08</div>
@@ -30,8 +30,8 @@
     <section class="desk" id="library" aria-labelledby="page-title">
       <aside class="desk-intro">
         <p class="kicker">Frontier intelligence index</p>
-        <h1 id="page-title">不追热点，<br><em>追踪信号。</em></h1>
-        <p class="intro-copy">从前沿实验室原始研究，到研究者的复现、解释与争论。优先收录 LLM、agent 与后训练领域中值得反复阅读的技术文章。</p>
+        <h1 id="page-title">Skip the hype.<br><em>Track the signal.</em></h1>
+        <p class="intro-copy">From frontier-lab research to independent replication, explanation, and debate. A durable index of technical writing on LLMs, agents, and post-training.</p>
         <div class="edition">
           <span>Edition 01</span>
           <span>2024—2026</span>
@@ -39,20 +39,20 @@
       </aside>
 
       <div class="workbench">
-        <div class="view-tabs" role="tablist" aria-label="内容视图">
-          <button class="tab is-active" type="button" data-view="featured" role="tab" aria-selected="true">精选 20</button>
-          <button class="tab" type="button" data-view="all" role="tab" aria-selected="false">完整 50</button>
-          <button class="tab" type="button" data-view="saved" role="tab" aria-selected="false">稍后读 <span id="saved-count">0</span></button>
+        <div class="view-tabs" role="tablist" aria-label="Collection view">
+          <button class="tab is-active" type="button" data-view="featured" role="tab" aria-selected="true">Curated 20</button>
+          <button class="tab" type="button" data-view="all" role="tab" aria-selected="false">All 50</button>
+          <button class="tab" type="button" data-view="saved" role="tab" aria-selected="false">Reading list <span id="saved-count">0</span></button>
         </div>
 
         <div class="search-row">
           <label class="search-box">
             <i data-lucide="search" aria-hidden="true"></i>
-            <span class="sr-only">搜索文章</span>
-            <input id="search" type="search" placeholder="搜索标题、作者或关键词" autocomplete="off">
+            <span class="sr-only">Search articles</span>
+            <input id="search" type="search" placeholder="Search titles, authors, or topics" autocomplete="off">
             <kbd>/</kbd>
           </label>
-          <button class="icon-button" id="clear-filters" type="button" title="清除筛选" aria-label="清除筛选">
+          <button class="icon-button" id="clear-filters" type="button" title="Clear filters" aria-label="Clear filters">
             <i data-lucide="rotate-ccw" aria-hidden="true"></i>
           </button>
         </div>
@@ -61,21 +61,21 @@
           <div class="signal-map-head">
             <div>
               <span class="utility-label">SIGNAL MAP</span>
-              <h2 id="signal-map-title">研究脉络</h2>
+              <h2 id="signal-map-title">Research threads</h2>
             </div>
-            <p>选择一条脉络过滤索引</p>
+            <p>Choose a thread to filter the index</p>
           </div>
           <div class="topic-bars" id="topic-bars"></div>
         </div>
 
         <div class="result-head">
-          <p><strong id="result-count">20</strong> 篇文章</p>
+          <p><span id="result-count">20</span> articles</p>
           <label class="sort-control">
-            <span>排序</span>
-            <select id="sort" aria-label="文章排序">
-              <option value="signal">编辑精选</option>
-              <option value="newest">最新发布</option>
-              <option value="shortest">阅读时间</option>
+            <span>Sort</span>
+            <select id="sort" aria-label="Article sort order">
+              <option value="signal">Editorial signal</option>
+              <option value="newest">Newest</option>
+              <option value="shortest">Reading time</option>
             </select>
             <i data-lucide="chevron-down" aria-hidden="true"></i>
           </label>
@@ -84,9 +84,9 @@
         <div class="article-list" id="article-list" aria-live="polite"></div>
         <div class="empty-state" id="empty-state" hidden>
           <i data-lucide="scan-search" aria-hidden="true"></i>
-          <h2>没有匹配的信号</h2>
-          <p>减少关键词或清除主题筛选。</p>
-          <button type="button" id="empty-reset">清除筛选</button>
+          <h2>No matching signals</h2>
+          <p>Try a broader query or clear the topic filter.</p>
+          <button type="button" id="empty-reset">Clear filters</button>
         </div>
       </div>
     </section>
@@ -94,24 +94,24 @@
     <section class="reading-path" aria-labelledby="path-title">
       <div class="section-heading">
         <p class="kicker">One deliberate route</p>
-        <h2 id="path-title">一条阅读路径，<br>理解 agent 技术栈。</h2>
-        <p>不是时间线，而是依赖关系：先理解系统，再理解训练，最后判断它是否可信。</p>
+        <h2 id="path-title">One reading path<br>through the agent stack.</h2>
+        <p>Not a timeline, but a dependency graph: understand the system, then the training process, then whether its behavior can be trusted.</p>
       </div>
       <div class="path-track">
         <button type="button" data-open="building-effective-agents">
-          <span>系统</span><strong>Agent 架构</strong><small>workflows → loops</small>
+          <span>System</span><strong>Agent architecture</strong><small>workflows → loops</small>
         </button>
         <i data-lucide="arrow-right" aria-hidden="true"></i>
         <button type="button" data-open="sft-rl-opd">
-          <span>训练</span><strong>策略分布</strong><small>SFT → RL → OPD</small>
+          <span>Training</span><strong>Policy distribution</strong><small>SFT → RL → OPD</small>
         </button>
         <i data-lucide="arrow-right" aria-hidden="true"></i>
         <button type="button" data-open="global-workspace">
-          <span>理解</span><strong>内部机制</strong><small>features → circuits</small>
+          <span>Inspection</span><strong>Internal mechanisms</strong><small>features → circuits</small>
         </button>
         <i data-lucide="arrow-right" aria-hidden="true"></i>
         <button type="button" data-open="agentic-misalignment">
-          <span>验证</span><strong>行为边界</strong><small>evals → oversight</small>
+          <span>Validation</span><strong>Behavioral limits</strong><small>evals → oversight</small>
         </button>
       </div>
     </section>
@@ -119,13 +119,13 @@
     <section class="method" id="method" aria-labelledby="method-title">
       <div class="method-statement">
         <p class="kicker">Curation protocol</p>
-        <h2 id="method-title">分类不是文件夹，<br><em>而是阅读决策。</em></h2>
+        <h2 id="method-title">A taxonomy is not a folder.<br><em>It is a reading decision.</em></h2>
       </div>
       <div class="method-grid">
-        <article><span>01</span><h3>原始性</h3><p>优先实验室技术报告、作者原文和带方法细节的工程复盘。</p></article>
-        <article><span>02</span><h3>可验证</h3><p>链接可访问，结论可追溯到实验、代码、数据或明确论证。</p></article>
-        <article><span>03</span><h3>信号密度</h3><p>拒绝只有发布信息的新闻稿，保留能改变理解或实践的内容。</p></article>
-        <article><span>04</span><h3>脉络互补</h3><p>官方文章给证据，研究者文章负责解释、复现、质疑和连接。</p></article>
+        <article><span>01</span><h3>Primary</h3><p>Prefer lab reports, author-owned writing, and engineering retrospectives with methodological detail.</p></article>
+        <article><span>02</span><h3>Verifiable</h3><p>Claims must trace back to experiments, code, data, or explicit reasoning.</p></article>
+        <article><span>03</span><h3>Signal-rich</h3><p>Exclude launch-only copy; keep writing that changes understanding or practice.</p></article>
+        <article><span>04</span><h3>Complementary</h3><p>Lab posts provide evidence; independent writers explain, reproduce, question, and connect it.</p></article>
       </div>
     </section>
   </main>
@@ -138,7 +138,7 @@
 
   <dialog class="article-dialog" id="article-dialog">
     <div class="dialog-shell">
-      <button class="dialog-close icon-button" type="button" aria-label="关闭详情" title="关闭">
+      <button class="dialog-close icon-button" type="button" aria-label="Close details" title="Close">
         <i data-lucide="x" aria-hidden="true"></i>
       </button>
       <div id="dialog-content"></div>
@@ -154,7 +154,7 @@
         <a class="article-date" target="_blank" rel="noreferrer"><time></time></a>
         <span class="article-why"></span>
       </div>
-      <button class="save-button icon-button" type="button" aria-label="加入稍后读" title="加入稍后读">
+      <button class="save-button icon-button" type="button" aria-label="Add to reading list" title="Add to reading list">
         <i data-lucide="bookmark" aria-hidden="true"></i>
       </button>
     </article>

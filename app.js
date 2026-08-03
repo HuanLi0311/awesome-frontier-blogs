@@ -2,6 +2,37 @@
   "use strict";
 
   const blogs = window.FRONTIER_BLOGS || [];
+  const curatedCopy = {
+    "global-workspace": ["Tests the global-workspace hypothesis inside a language model.", "A small set of privileged representations appears to support reportable, controllable, and reusable reasoning."],
+    "harness-engineering-lilian": ["Builds verifiable self-improvement loops around an agent harness.", "Agent capability increasingly depends on task environments, feedback loops, and verification infrastructure around the model."],
+    "openai-harness-engineering": ["Production lessons from OpenAI's agent runtime architecture.", "Clear environments, tools, feedback, and persistent state often matter more than additional prompt complexity."],
+    "kimi-researcher": ["Trains long-horizon search and reasoning end to end with RL.", "Research-agent behavior can emerge from a unified RL process when the environment and rewards are verifiable."],
+    "sft-rl-opd": ["Unifies three post-training methods through policy distributions.", "The central distinction is how each method changes the training distribution as the policy evolves."],
+    "measuring-agent-autonomy": ["Turns agent autonomy into observable deployment measures.", "Autonomy should combine task duration, intervention frequency, permission scope, and recovery behavior."],
+    "alphaevolve": ["Combines code generation, evaluation, and evolution to discover algorithms.", "Automatically scored problems offer a practical route from coding agents to open-ended scientific discovery."],
+    "frontier-post-training-review": ["Breaks down frontier post-training recipes from practice.", "Data, sampling, judges, and training stability jointly determine post-training performance."],
+    "deepseek-r1": ["Maps verifiable-reward RL and multi-stage reasoning training.", "Large-scale RL can elicit reasoning, while cold-start data and staged training improve readability and generalization."],
+    "circuit-tracing": ["Traces an internal computation graph from a single prompt.", "Cross-layer transcoders and attribution graphs turn distributed activations into testable causal hypotheses."],
+    "biology-llm": ["Dissects Claude's mechanisms through concrete case studies.", "Models can plan ahead and share abstract representations, while several competing paths may shape one output."],
+    "agentic-misalignment": ["Stress-tests agent behavior under conflicting goals.", "Capable models may cross policy boundaries in simulated organizations, making contextual stress tests essential."],
+    "cot-monitorability": ["Tests whether reasoning traces remain useful safety signals.", "Chain-of-thought is valuable evidence, but optimization pressure may reduce its faithfulness."],
+    "natural-language-autoencoders": ["Translates model activations directly into natural-language explanations.", "A natural-language bottleneck can preserve and explain part of a model's internal state."],
+    "building-effective-agents": ["A durable guide to choosing workflows or autonomous agents.", "Start with the simplest composable pattern and add autonomy only when task openness requires it."],
+    "how-confessions-keep-models-honest": ["Uses a separate confession channel to expose shortcuts and errors.", "An independent reporting channel can reveal reward hacking and hidden failures, but still needs external verification."],
+    "qwen-agentworld": ["Uses language world models to scale general agent training.", "High-throughput simulated environments can reduce interaction cost and expand coverage for agent RL."],
+    "genie-3": ["Moves world models from video generation to interactive environments.", "World models are becoming actionable environments, though long-horizon consistency and control remain open problems."],
+    "build-agents-not-pipelines": ["Explains when an autonomous loop beats a fixed pipeline.", "Agents are useful for branches that cannot be enumerated in advance, not as a new name for fixed workflows."],
+    "why-language-models-hallucinate": ["Explains hallucinations through training and evaluation incentives.", "Evaluation systems that reward guessing but not uncertainty systematically encourage confident answers."]
+  };
+  const copyFor = blog => {
+    const curated = curatedCopy[blog.id];
+    if (curated) return { summary: curated[0], takeaway: curated[1] };
+    const subjects = blog.tags.slice(0, 2).join(" and ");
+    return {
+      summary: `${blog.kind} on ${subjects}.`,
+      takeaway: `A primary source for readers tracking ${subjects}.`
+    };
+  };
   const state = {
     view: "featured",
     query: "",
@@ -64,7 +95,7 @@
       if (state.view === "saved" && !state.saved.has(blog.id)) return false;
       if (state.topic && blog.topic !== state.topic) return false;
       if (!state.query) return true;
-      const haystack = normalize([blog.title, blog.author, blog.source, blog.topic, blog.kind, blog.why, ...blog.tags].join(" "));
+      const haystack = normalize([blog.title, blog.author, blog.source, blog.topic, blog.kind, copyFor(blog).summary, ...blog.tags].join(" "));
       return haystack.includes(normalize(state.query));
     });
 
@@ -85,15 +116,15 @@
     image.alt = "";
     image.title = `${blog.source} · ${blog.kind}`;
     node.querySelector(".article-title").textContent = blog.title;
-    open.title = `${blog.title} — 查看详情`;
-    node.querySelector(".article-why").textContent = blog.why;
+    open.title = `${blog.title} — view details`;
+    node.querySelector(".article-why").textContent = copyFor(blog).summary;
     const dateLink = node.querySelector(".article-date");
     dateLink.href = blog.url;
-    dateLink.setAttribute("aria-label", `${blog.title} 原文，${displayDate(blog.date)}`);
+    dateLink.setAttribute("aria-label", `${blog.title}, original article, ${displayDate(blog.date)}`);
     node.querySelector("time").textContent = linkedDate(blog.date);
     node.querySelector("time").dateTime = blog.date;
     save.classList.toggle("is-saved", state.saved.has(blog.id));
-    save.title = state.saved.has(blog.id) ? "移出稍后读" : "加入稍后读";
+    save.title = state.saved.has(blog.id) ? "Remove from reading list" : "Add to reading list";
     save.setAttribute("aria-label", save.title);
     open.addEventListener("click", () => openDialog(blog));
     save.addEventListener("click", () => toggleSaved(blog.id));
@@ -122,12 +153,12 @@
       <div class="dialog-kicker"><img src="${favicon(blog.url)}" alt="" width="20" height="20"><span>${blog.source} · ${blog.topic}</span></div>
       <h2 class="dialog-title">${blog.title}</h2>
       <p class="dialog-byline">${blog.author} · ${displayDate(blog.date)} · ${blog.minutes} min · ${blog.level}</p>
-      <div class="dialog-takeaway"><span>KEY TAKEAWAY</span><p>${blog.takeaway}</p></div>
+      <div class="dialog-takeaway"><span>KEY TAKEAWAY</span><p>${copyFor(blog).takeaway}</p></div>
       <div class="dialog-actions">
-        <a href="${blog.url}" target="_blank" rel="noreferrer">阅读原文 <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
-        ${blog.companion ? `<a class="secondary" href="${blog.companion}" target="_blank" rel="noreferrer">实验室导读</a>` : ""}
+        <a href="${blog.url}" target="_blank" rel="noreferrer">Read original <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+        ${blog.companion ? `<a class="secondary" href="${blog.companion}" target="_blank" rel="noreferrer">Lab overview</a>` : ""}
         <a class="secondary" href="${blog.x}" target="_blank" rel="noreferrer">X / Twitter</a>
-        <button class="secondary dialog-save" type="button"><i data-lucide="bookmark" aria-hidden="true"></i>${state.saved.has(blog.id) ? "移出稍后读" : "稍后读"}</button>
+        <button class="secondary dialog-save" type="button"><i data-lucide="bookmark" aria-hidden="true"></i>${state.saved.has(blog.id) ? "Remove" : "Save"}</button>
       </div>`;
     elements.dialogContent.querySelector(".dialog-save").addEventListener("click", () => {
       toggleSaved(blog.id);
