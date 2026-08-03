@@ -30,6 +30,7 @@
     ? "https://github.com/nrehiew.png?size=64"
     : `https://www.google.com/s2/favicons?domain=${encodeURIComponent(sourceDomain(url))}&sz=64`;
   const displayDate = value => value.length === 4 ? value : value.slice(0, 7).replace("-", ".");
+  const linkedDate = value => `[${displayDate(value)}]`;
   const normalize = value => value.toLowerCase().normalize("NFKC");
 
   function topics() {
@@ -79,16 +80,18 @@
     const save = node.querySelector(".save-button");
     node.dataset.id = blog.id;
     node.querySelector(".article-index").textContent = String(index + 1).padStart(2, "0");
-    const image = node.querySelector(".article-source img");
+    const image = node.querySelector(".article-source-icon");
     image.src = favicon(blog.url);
     image.alt = "";
-    node.querySelector(".article-source span").textContent = `${blog.source} · ${blog.kind}`;
+    image.title = `${blog.source} · ${blog.kind}`;
     node.querySelector(".article-title").textContent = blog.title;
+    open.title = `${blog.title} — 查看详情`;
     node.querySelector(".article-why").textContent = blog.why;
-    node.querySelector(".article-tags").innerHTML = blog.tags.slice(0, 3).map(tag => `<span>${tag}</span>`).join("");
-    node.querySelector("time").textContent = displayDate(blog.date);
+    const dateLink = node.querySelector(".article-date");
+    dateLink.href = blog.url;
+    dateLink.setAttribute("aria-label", `${blog.title} 原文，${displayDate(blog.date)}`);
+    node.querySelector("time").textContent = linkedDate(blog.date);
     node.querySelector("time").dateTime = blog.date;
-    node.querySelector(".article-reading").textContent = `${blog.minutes} MIN · ${blog.level.toUpperCase()}`;
     save.classList.toggle("is-saved", state.saved.has(blog.id));
     save.title = state.saved.has(blog.id) ? "移出稍后读" : "加入稍后读";
     save.setAttribute("aria-label", save.title);

@@ -29,43 +29,35 @@
 
 ### 1. Build — Agents & harnesses
 
-| Read | Source | Why it matters |
-|---|---|---|
-| [Harness Engineering for Self-Improvement](https://lilianweng.github.io/posts/2026-07-04-harness/) | Lilian Weng · 2026 | 把递归自我改进落到训练管线、评测和部署系统，而不是停在概念层。 |
-| [Harness Engineering](https://openai.com/index/harness-engineering/) | OpenAI · 2026-02 | 来自生产环境的 harness 经验，讨论如何把模型能力转化为稳定完成率。 |
-| [Building Effective Agents](https://www.anthropic.com/engineering/building-effective-agents) | Anthropic · 2024 | 区分 workflow 与 agent，给出从 prompt chaining 到自主循环的工程模式。 |
-| [AlphaEvolve](https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/) | Google DeepMind · 2025 | 把代码生成、自动评测与进化搜索组成能发现新算法的闭环。 |
-| [Qwen-AgentWorld](https://github.com/QwenLM/Qwen-AgentWorld) | Qwen · 2026 | 用语言世界模型模拟环境，降低真实 agent 交互与 RL 的训练成本。 |
-| [Build Agents, Not Pipelines](https://seangoedecke.com/build-agents-not-pipelines/) | Sean Goedecke · 2026 | 简洁解释何时需要自主循环，何时确定性 pipeline 已经足够。 |
+- **Harness Engineering for Self-Improvement** [[2026.07]](https://lilianweng.github.io/posts/2026-07-04-harness/) — 用 harness 构建可验证的自我改进闭环。
+- **Harness Engineering** [[2026.02]](https://openai.com/index/harness-engineering/) — 来自 OpenAI 的生产级 agent 运行框架经验。
+- **Building Effective Agents** [[2024.12]](https://www.anthropic.com/engineering/building-effective-agents) — 区分 workflow 与 agent 的经典工程指南。
+- **AlphaEvolve** [[2025.05]](https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/) — 用代码生成、自动评测和进化搜索发现新算法。
+- **Qwen-AgentWorld** [[2026.06]](https://github.com/QwenLM/Qwen-AgentWorld) — 用语言世界模型扩展通用 agent 训练。
+- **Build Agents, Not Pipelines** [[2026.05]](https://seangoedecke.com/build-agents-not-pipelines/) — 判断何时该用自主循环而非固定管线。
 
 ### 2. Train — Reasoning & post-training
 
-| Read | Source | Why it matters |
-|---|---|---|
-| [Kimi-Researcher](https://moonshotai.github.io/Kimi-Researcher/) | Moonshot AI · 2025 | 展示端到端 agentic RL 如何训练长程检索、规划与证据综合。 |
-| [SFT, RL, and On-Policy Distillation Through a Distributional Lens](https://nrehiew.github.io/blog/sft_rl_opd/) | Nathan Rehiew · 2025 | 用统一分布视角解释三种后训练范式，是近期高信号概念文。 |
-| [Frontier Post-training Recipe Review](https://www.interconnects.ai/p/frontier-post-training-recipe-review) | Interconnects · 2026 | 从实践者角度连接论文算法名与数据、采样、评判器和稳定性。 |
-| [DeepSeek-R1](https://github.com/deepseek-ai/DeepSeek-R1) | DeepSeek · 2025 | 推理模型浪潮的关键开放报告，给出可验证奖励 RL 与多阶段训练路线。 |
+- **Kimi-Researcher** [[2025.06]](https://moonshotai.github.io/Kimi-Researcher/) — 端到端 RL 训练长程检索与推理 agent。
+- **SFT, RL, and On-Policy Distillation Through a Distributional Lens** [[2026.05]](https://nrehiew.github.io/blog/sft_rl_opd/) — 用策略分布统一理解三种后训练范式。
+- **Frontier Post-training Recipe Review** [[2026.06]](https://www.interconnects.ai/p/frontier-post-training-recipe-review) — 从实践角度拆解前沿后训练配方。
+- **DeepSeek-R1** [[2025.01]](https://github.com/deepseek-ai/DeepSeek-R1) — 可验证奖励 RL 与多阶段推理训练路线。
 
 ### 3. Inspect — Mechanistic interpretability
 
-| Read | Source | Why it matters |
-|---|---|---|
-| [Verbalizable Representations Form a Global Workspace in Language Models](https://transformer-circuits.pub/2026/workspace/index.html) | Anthropic · 2026 | 把 global workspace 假说转化成可干预的模型内部实验。 |
-| [Circuit Tracing](https://transformer-circuits.pub/2025/attribution-graphs/methods.html) | Anthropic · 2025 | 从单次 prompt 构造模型计算图，是理解 attribution graphs 的方法入口。 |
-| [On the Biology of a Large Language Model](https://transformer-circuits.pub/2025/attribution-graphs/biology.html) | Anthropic · 2025 | 用规划、诗歌、算术和幻觉案例展示 circuit tracing 能看见什么。 |
-| [Natural Language Autoencoders](https://transformer-circuits.pub/2026/nla/index.html) | Anthropic · 2026 | 尝试让模型把内部状态直接翻译成自然语言，探索 SAE 之外的新路线。 |
+- **Verbalizable Representations Form a Global Workspace in Language Models** [[2026.07]](https://transformer-circuits.pub/2026/workspace/index.html) — 在模型内部验证 global workspace 假说。
+- **Circuit Tracing** [[2025.03]](https://transformer-circuits.pub/2025/attribution-graphs/methods.html) — 从单次 prompt 追踪模型内部计算图。
+- **On the Biology of a Large Language Model** [[2025.03]](https://transformer-circuits.pub/2025/attribution-graphs/biology.html) — 用具体案例解剖 Claude 的内部机制。
+- **Natural Language Autoencoders** [[2026.05]](https://transformer-circuits.pub/2026/nla/index.html) — 把模型激活直接翻译成自然语言解释。
 
 ### 4. Trust — Alignment & evaluations
 
-| Read | Source | Why it matters |
-|---|---|---|
-| [Measuring AI Agent Autonomy in Practice](https://www.anthropic.com/research/measuring-agent-autonomy) | Anthropic · 2025 | 把“自主性”拆成任务持续时间、介入频率、权限与恢复等可观测指标。 |
-| [Agentic Misalignment](https://www.anthropic.com/research/agentic-misalignment) | Anthropic · 2025 | 跨模型压力测试有权限的 agent 在目标冲突下是否会策略性越界。 |
-| [Evaluating Chain-of-Thought Monitorability](https://openai.com/index/evaluating-chain-of-thought-monitorability/) | OpenAI · 2025-12 | 研究推理轨迹能否成为监控前沿模型行为的可靠窗口。 |
-| [How Confessions Can Keep Language Models Honest](https://openai.com/index/how-confessions-can-keep-language-models-honest/) | OpenAI · 2025-12 | 探索独立 confession 通道对奖励黑客和隐藏失误的检测价值。 |
-| [Why Language Models Hallucinate](https://openai.com/index/why-language-models-hallucinate/) | OpenAI · 2025-09 | 从训练与评测激励解释幻觉为何持续存在，而不只归因于模型缺陷。 |
-| [Genie 3](https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/) | Google DeepMind · 2025 | 世界模型从视频生成走向可交互环境，直接影响 agent 的训练边界。 |
+- **Measuring AI Agent Autonomy in Practice** [[2025.09]](https://www.anthropic.com/research/measuring-agent-autonomy) — 把 agent 自主性拆成可观测部署指标。
+- **Agentic Misalignment** [[2025.06]](https://www.anthropic.com/research/agentic-misalignment) — 压力测试目标冲突下的 agent 越界行为。
+- **Evaluating Chain-of-Thought Monitorability** [[2025.12]](https://openai.com/index/evaluating-chain-of-thought-monitorability/) — 检验思维链能否成为可靠的安全监控窗口。
+- **How Confessions Can Keep Language Models Honest** [[2025.12]](https://openai.com/index/how-confessions-can-keep-language-models-honest/) — 用独立 confession 通道暴露取巧与失误。
+- **Why Language Models Hallucinate** [[2025.09]](https://openai.com/index/why-language-models-hallucinate/) — 从训练与评测激励解释模型幻觉。
+- **Genie 3** [[2025.08]](https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/) — 从视频生成迈向可交互的世界模型。
 
 ## What qualifies
 

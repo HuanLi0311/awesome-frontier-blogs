@@ -26,7 +26,7 @@ Last verified: **2026-08-03**
 | 2026-07-04 | [Harness Engineering for Self-Improvement](https://lilianweng.github.io/posts/2026-07-04-harness/) | Lilian Weng | Researcher essay |
 | 2026-02-11 | [Harness Engineering](https://openai.com/index/harness-engineering/) | OpenAI | Lab engineering |
 | 2025-05-14 | [AlphaEvolve](https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/) | Google DeepMind | Lab research |
-| 2026 | [Qwen-AgentWorld](https://github.com/QwenLM/Qwen-AgentWorld) | Qwen Team | Technical report |
+| 2026-06-22 | [Qwen-AgentWorld](https://github.com/QwenLM/Qwen-AgentWorld) | Qwen Team | Technical report |
 | 2026-05-31 | [Build Agents, Not Pipelines](https://seangoedecke.com/build-agents-not-pipelines/) | Sean Goedecke | Engineer essay |
 | 2024-12-19 | [Building Effective Agents](https://www.anthropic.com/engineering/building-effective-agents) | Anthropic | Lab engineering |
 | 2025-10-16 | [Equipping Agents for the Real World with Agent Skills](https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills) | Anthropic | Lab engineering |
@@ -38,8 +38,8 @@ Last verified: **2026-08-03**
 
 | Date | Article | Author | Type |
 |---|---|---|---|
-| 2025 | [Kimi-Researcher](https://moonshotai.github.io/Kimi-Researcher/) | Moonshot AI | Lab research |
-| 2025 | [SFT, RL, and On-Policy Distillation Through a Distributional Lens](https://nrehiew.github.io/blog/sft_rl_opd/) | Nathan Rehiew | Researcher essay |
+| 2025-06-20 | [Kimi-Researcher](https://moonshotai.github.io/Kimi-Researcher/) | Moonshot AI | Lab research |
+| 2026-05-10 | [SFT, RL, and On-Policy Distillation Through a Distributional Lens](https://nrehiew.github.io/blog/sft_rl_opd/) | Nathan Rehiew | Researcher essay |
 | 2026-06-16 | [Frontier Post-training Recipe Review](https://www.interconnects.ai/p/frontier-post-training-recipe-review) | Nathan Lambert & Finbarr Timbers | Researcher essay |
 | 2025-01-20 | [DeepSeek-R1](https://github.com/deepseek-ai/DeepSeek-R1) | DeepSeek AI | Technical report |
 | 2025-07-11 | [Kimi K2](https://github.com/MoonshotAI/Kimi-K2) | Moonshot AI | Technical report |
