@@ -1,6 +1,7 @@
 <div align="center">
 
-# Frontier / Log
+# awesome-frontier-blogs
+
 
 <span>A field guide to the technical writing that builds long-horizon agents: an external harness coupled to an internal model.</span>
 
@@ -16,13 +17,10 @@
 
 ## How to read the taxonomy
 
-### External Harness
+This catalog has two layers:
 
-Loops, context and memory, orchestration, and verification describe capabilities that live outside the model weights at runtime.
-
-### Internal Model
-
-Data and environments, pre/mid-training, reinforcement learning, on-policy distillation, and self-evolution describe capabilities that are learned into the model or its persistent policy.
+- External Harness: loops, context and memory, orchestration and multi-agent control, and verification describe capabilities that live outside the model weights at runtime.
+- Internal Model: data and environment, pre/mid-training, reinforcement learning, on-policy distillation, and self-evolution describe capabilities that are learned into the model or its persistent policy.
 
 An article is assigned one primary section. Bridge topics appear once, under the side where their main intervention lands. The date is the original publication month, not a later page update.
 
@@ -34,9 +32,11 @@ An article is assigned one primary section. Bridge topics appear once, under the
 
 The scale describes durable technical influence, not web traffic or company size. Author names are taken from the source when available; team labels are used when the source publishes collectively.
 
-## Catalog
+## External Harness
 
-## Loops
+Loops, context and memory, orchestration and multi-agent control, and verification describe the runtime system around the model.
+
+### Loops
 
 How a system plans, executes, recovers, and sustains work over many steps.
 
@@ -61,7 +61,7 @@ How a system plans, executes, recovers, and sustains work over many steps.
 | [2022.05](https://deepmind.google/blog/a-generalist-agent/) | <img src="assets/logos/google-deepmind.svg" alt="" width="16" height="16"> [A Generalist Agent](https://deepmind.google/blog/a-generalist-agent/) | Scott Reed et al. | DeepMind | S |
 | [2018.06](https://deepmind.google/blog/agents-that-imagine-and-plan/) | <img src="assets/logos/google-deepmind.svg" alt="" width="16" height="16"> [Agents That Imagine and Plan](https://deepmind.google/blog/agents-that-imagine-and-plan/) | Google DeepMind team | DeepMind | A |
 
-## Context & Memory
+### Context & Memory
 
 How systems select, compress, retrieve, and preserve state across calls.
 
@@ -85,7 +85,7 @@ How systems select, compress, retrieve, and preserve state across calls.
 | [2018.06](https://jalammar.github.io/illustrated-transformer/) | <img src="assets/logos/independent.svg" alt="" width="16" height="16"> [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) | Jay Alammar | Independent | S |
 | [2017.06](https://research.facebook.com/publications/memory-networks/) | <img src="assets/logos/meta.svg" alt="" width="16" height="16"> [Memory Networks](https://research.facebook.com/publications/memory-networks/) | Facebook AI Research team | Meta AI | A |
 
-## Orchestration
+### Orchestration & Multi-agent Control
 
 How tools, skills, protocols, and agent roles are composed at runtime.
 
@@ -111,7 +111,7 @@ How tools, skills, protocols, and agent roles are composed at runtime.
 | [2021.06](https://ai.googleblog.com/2021/06/language-models-as-few-shot-learners.html) | <img src="assets/logos/google-research.svg" alt="" width="16" height="16"> [Language Models as Few-Shot Learners for Tool Use](https://ai.googleblog.com/2021/06/language-models-as-few-shot-learners.html) | Google Research team | Google Research | A |
 | [2020.10](https://dspy.ai/) | <img src="assets/logos/google-research.svg" alt="" width="16" height="16"> [DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines](https://dspy.ai/) | DSPy team | Stanford University | A |
 
-## Verification
+### Verification
 
 How systems check outcomes, trajectories, faithfulness, safety, and failure modes.
 
@@ -144,7 +144,11 @@ How systems check outcomes, trajectories, faithfulness, safety, and failure mode
 | [2022.09](https://webshop-pnlp.github.io/) | <img src="assets/logos/google-research.svg" alt="" width="16" height="16"> [WebShop: Towards Scalable Real-World Web Interaction](https://webshop-pnlp.github.io/) | Shunyu Yao et al. | Princeton University | S |
 | [2021.08](https://deepmind.google/blog/melting-pot-an-evaluation-suite-for-multi-agent-reinforcement-learning/) | <img src="assets/logos/google-deepmind.svg" alt="" width="16" height="16"> [Melting Pot: An Evaluation Suite for Multi-Agent Reinforcement Learning](https://deepmind.google/blog/melting-pot-an-evaluation-suite-for-multi-agent-reinforcement-learning/) | DeepMind team | DeepMind | S |
 
-## Data & Environment
+## Internal Model
+
+Data and environment, pre/mid-training, reinforcement learning, on-policy distillation, and self-evolution describe capabilities learned into the model or its persistent policy.
+
+### Data / Environment
 
 How tasks, environments, simulations, and interaction data are synthesized.
 
@@ -166,7 +170,7 @@ How tasks, environments, simulations, and interaction data are synthesized.
 | [2020.02](https://minerl.io/) | <img src="assets/logos/microsoft.svg" alt="" width="16" height="16"> [MineRL: Towards AI in Minecraft](https://minerl.io/) | MineRL team | Carnegie Mellon / Microsoft | A |
 | [2019.10](https://openai.com/index/openai-five/) | <img src="assets/logos/openai.svg" alt="" width="16" height="16"> [OpenAI Five](https://openai.com/index/openai-five/) | OpenAI Research team | OpenAI | A |
 
-## Pre/Mid-training
+### Pre/Mid-training
 
 How architecture, data mixtures, long context, and base-model capability are built.
 
@@ -191,7 +195,7 @@ How architecture, data mixtures, long context, and base-model capability are bui
 | [2020.01](https://openai.com/index/scaling-laws-for-neural-language-models/) | <img src="assets/logos/openai.svg" alt="" width="16" height="16"> [Scaling Laws for Neural Language Models](https://openai.com/index/scaling-laws-for-neural-language-models/) | Jared Kaplan et al. | OpenAI | S |
 | [2019.02](https://openai.com/index/better-language-models/) | <img src="assets/logos/openai.svg" alt="" width="16" height="16"> [Language Models are Unsupervised Multitask Learners](https://openai.com/index/better-language-models/) | Alec Radford et al. | OpenAI | S |
 
-## Reinforcement Learning
+### Reinforcement Learning
 
 How reward, exploration, process supervision, and policy optimization shape behavior.
 
@@ -221,7 +225,7 @@ How reward, exploration, process supervision, and policy optimization shape beha
 | [2020.10](https://deepmind.google/blog/acme-a-new-framework-for-distributed-reinforcement-learning/) | <img src="assets/logos/google-deepmind.svg" alt="" width="16" height="16"> [ACME: A Research Framework for Distributed Reinforcement Learning](https://deepmind.google/blog/acme-a-new-framework-for-distributed-reinforcement-learning/) | DeepMind team | DeepMind | A |
 | [2020.06](https://lilianweng.github.io/lil-log/2020/06/07/exploration-strategies-in-deep-reinforcement-learning.html) | <img src="assets/logos/independent.svg" alt="" width="16" height="16"> [Exploration Strategies in Deep Reinforcement Learning](https://lilianweng.github.io/lil-log/2020/06/07/exploration-strategies-in-deep-reinforcement-learning.html) | Lilian Weng | OpenAI | B |
 
-## On-policy Distillation
+### On-policy Distillation
 
 How teacher behavior is transferred while the student policy is changing.
 
@@ -237,7 +241,7 @@ How teacher behavior is transferred while the student policy is changing.
 | [2023.02](https://www.microsoft.com/en-us/research/project/self-instruct/) | <img src="assets/logos/microsoft.svg" alt="" width="16" height="16"> [Self-Instruct: Aligning Language Models with Self-Generated Instructions](https://www.microsoft.com/en-us/research/project/self-instruct/) | Yizhong Wang et al. | Microsoft Research | S |
 | [2022.12](https://github.com/microsoft/LMOps) | <img src="assets/logos/microsoft.svg" alt="" width="16" height="16"> [MiniLLM: Knowledge Distillation of Large Language Models](https://github.com/microsoft/LMOps) | Microsoft Research team | Microsoft Research | A |
 
-## Self-evolution
+### Self-evolution
 
 How models and agents accumulate experience, revise behavior, and improve across tasks.
 
