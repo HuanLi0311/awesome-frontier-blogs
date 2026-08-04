@@ -177,7 +177,7 @@ How architecture, data mixtures, long context, and base-model capability are bui
 | Date | Blog | Intro | Impact |
 |---|---|---|---|
 | [2026.05](https://openai.com/index/what-parameter-golf-taught-us/) | <img src="assets/logos/openai.svg" alt="" width="16" height="16"> [What Parameter Golf Taught Us](https://openai.com/index/what-parameter-golf-taught-us/) | Lessons on efficient language-model training under tight compute. | A |
-| [2025.04](https://qwenlm.github.io/blog/qwen3/) | <img src="assets/logos/qwen.svg" alt="" width="16" height="16"> [Qwen3 Technical Report](https://qwen.ai/blog?id=qwen3) | Technical report on Qwen3 architecture, data, and capabilities. | A |
+| [2025.04](https://qwen.ai/blog?id=qwen3) | <img src="assets/logos/qwen.svg" alt="" width="16" height="16"> [Qwen3 Technical Report](https://qwen.ai/blog?id=qwen3) | Technical report on Qwen3 architecture, data, and capabilities. | A |
 | [2025.03](https://ai.google.dev/gemma/docs/core/model_card_3) | <img src="assets/logos/google-deepmind.svg" alt="" width="16" height="16"> [Gemma 3: Technical Report](https://ai.google.dev/gemma/docs/core/model_card_3) | Technical report on an open, multimodal language model. | A |
 | [2024.12](https://github.com/deepseek-ai/DeepSeek-V3) | <img src="assets/logos/deepseek.svg" alt="" width="16" height="16"> [DeepSeek-V3 Technical Report](https://github.com/deepseek-ai/DeepSeek-V3) | Technical report on efficient mixture-of-experts pretraining. | A |
 | [2024.11](https://allenai.org/blog/olmo2) | <img src="assets/logos/independent.svg" alt="" width="16" height="16"> [OLMo 2: The Best Fully Open Language Model to Date](https://allenai.org/blog/olmo2) | Open language-model training with transparent data and recipes. | A |
