@@ -3,7 +3,7 @@
 # awesome-frontier-blogs
 
 
-<span>A field guide to the technical writing that builds long-horizon agents: an external harness coupled to an internal model.</span>
+<span>A field guide to build long-horizon agents: an external harness coupled to an internal model.</span>
 
 [Interactive index](https://huanli0311.github.io/awesome-frontier-blogs/) / [README catalog](README.md) / [Contribute](CONTRIBUTING.md)
 
