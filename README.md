@@ -13,6 +13,10 @@
 
 </div>
 
+<p align="center">
+  <img src="assets/frontier-system-evolution.png" alt="External Harness and Internal Model co-evolution diagram" width="960">
+</p>
+
 > This catalog treats an agent as a coupled system: an externalized harness and an internalized model. Entries are grouped by the main place where capability is stored or improved. Within each section, articles are ordered newest first.
 
 ## How to read the taxonomy
